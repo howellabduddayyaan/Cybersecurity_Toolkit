@@ -12,6 +12,8 @@ APP_NAME = "Cybersecurity Toolkit"
 VERSION = "1.0.0"
 AUTHOR = "Abdud Dayyaan Howell"
 
+# _________________________________________________________________________________________________
+
 # -------------
 # Project Paths
 # -------------
@@ -31,3 +33,16 @@ COMMON_PASSWORDS = ASSETS_DIR / "common_passwords.txt"
 USERS_FILE = BASE_DIR / "users.txt"
 VAULT_FILE = BASE_DIR / "vault.txt"
 
+# _________________________________________________________________________________________________
+
+# ----------------
+# Scanner Settings
+# ----------------
+
+DEFAULT_TIMEOUT = 180.0            # Seconds (3mins)
+DEFAULT_START_PORT = 1
+DEFAULT_END_PORT = 1024
+
+DEFAULT_NETWORK_RANGE = 254
+
+# _________________________________________________________________________________________________
