@@ -122,3 +122,50 @@ MEDIUM_RISK_SCORE = 2
 
 # _________________________________________________________________________________________________
 
+# --------------
+# Dashboard Menu
+# --------------
+
+MENU = {
+    "System": [
+        "Device Scanner"
+    ],
+
+    "Network": [
+        "Network Scanner",
+        "Port Scanner",
+        "Packet Sniffer",
+        "DNS Lookup"
+    ],
+
+    "Web Security": [
+        "Phishing URL Checker",
+        "SSL Certificate Checker",
+        "WHOIS Lookup"
+    ],
+
+    "Authentication": [
+        "Login System",
+        "Password Manager"
+    ],
+
+    "Password Tools": [
+        "Password Strength Checker",
+        "File Hash Checker"
+    ],
+
+    "Cryptography": [
+        "Caesar Cipher",
+        "Base64 Encoder/Decoder"
+    ],
+
+    "Analysis": [
+        "Log Analyzer"
+    ],
+
+    "Education": [
+        "Brute Force Simulator"
+    ]
+}
+
+# _________________________________________________________________________________________________
