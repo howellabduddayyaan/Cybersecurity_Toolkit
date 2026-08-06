@@ -1,0 +1,37 @@
+# =======================
+# === Sample Log File ===
+# =======================
+
+
+2026-07-09 08:15:22 INFO User admin logged in from 192.168.1.5
+2026-07-09 08:16:01 INFO Firewall started successfully
+2026-07-09 08:17:48 INFO Scheduled backup started
+2026-07-09 08:18:03 WARNING Failed login from 192.168.1.20
+2026-07-09 08:18:40 WARNING Failed login from 192.168.1.20
+2026-07-09 08:19:11 ERROR Database connection failed
+2026-07-09 08:20:15 INFO User john logged in from 192.168.1.25
+2026-07-09 08:21:08 INFO Backup completed successfully
+2026-07-09 08:22:45 WARNING Failed login from 192.168.1.50
+2026-07-09 08:23:10 ERROR File not found
+2026-07-09 08:24:01 INFO Antivirus definitions updated
+2026-07-09 08:25:30 INFO Backup completed successfully
+2026-07-09 08:26:15 WARNING CPU usage exceeded 90%
+2026-07-09 08:27:50 INFO User mary logged in from 192.168.1.45
+2026-07-09 08:28:33 ERROR Unable to connect to mail server
+2026-07-09 08:29:10 INFO Network scan completed
+2026-07-09 08:30:02 WARNING Failed login from 192.168.1.75
+2026-07-09 08:31:47 INFO User guest logged out
+2026-07-09 08:32:58 ERROR Access denied to protected resource
+2026-07-09 08:33:40 INFO System health check completed
+2026-07-09 08:34:20 WARNING Low disk space detected
+2026-07-09 08:35:05 INFO User admin logged out
+2026-07-09 08:36:18 INFO Security scan completed
+2026-07-09 08:37:26 ERROR DNS lookup failed
+2026-07-09 08:38:12 WARNING Multiple failed login attempts detected
+2026-07-09 08:39:55 INFO Automatic updates installed
+2026-07-09 08:40:41 INFO VPN connection established
+2026-07-09 08:41:30 ERROR SSL certificate validation failed
+2026-07-09 08:42:14 WARNING Unauthorized USB device detected
+2026-07-09 08:43:50 INFO System shutdown initiated
+
+
