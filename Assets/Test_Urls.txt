@@ -1,0 +1,119 @@
+# ==============================================
+# === Test URLs for the Phishing URL Checker ===
+# ==============================================
+
+# --------
+# LOW RISK
+# --------
+
+https://www.google.com
+https://www.microsoft.com
+https://github.com
+https://python.org
+https://wikipedia.org
+
+___________________________________________________________________________________________________
+
+# --------------------
+# IP ADDRESS DETECTION
+# --------------------
+
+http://192.168.1.1
+http://127.0.0.1
+http://10.0.0.1
+
+___________________________________________________________________________________________________
+
+# -------------------
+# SUSPICIOUS KEYWORDS
+# -------------------
+
+https://example.com/login
+https://example.com/verify
+https://example.com/account
+https://example.com/password
+https://example.com/secure
+https://example.com/update
+
+___________________________________________________________________________________________________
+
+# ----------------------------
+# MULTIPLE SUSPICIOUS KEYWORDS
+# ----------------------------
+
+https://example.com/login/verify/account/update/password
+
+___________________________________________________________________________________________________
+
+# -------------------
+# TOO MANY SUBDOMAINS
+# -------------------
+
+https://a.b.c.d.example.com
+https://login.verify.secure.example.com
+
+___________________________________________________________________________________________________
+
+# --------
+# LONG URL
+# --------
+
+https://example.com/login/verify/account/update/password/confirm/secure/bank/login/verify/account/update/password/confirm
+
+___________________________________________________________________________________________________
+
+# -------------
+# @ SYMBOL TEST
+# -------------
+
+https://example.com/test@redirect
+http://google.com@login.example.com
+
+___________________________________________________________________________________________________
+
+# ------------------
+# DOMAIN WITH HYPHEN
+# ------------------
+
+https://secure-login-example.com
+https://bank-update-example.com
+
+___________________________________________________________________________________________________
+
+# --------
+# NO HTTPS
+# --------
+
+http://google.com
+http://example.com/login
+
+___________________________________________________________________________________________________
+
+# -----------
+# MEDIUM RISK
+# -----------
+
+http://192.168.1.1/login
+http://example.com/login
+http://secure-login-example.com
+
+___________________________________________________________________________________________________
+
+# ---------
+# HIGH RISK
+# ---------
+
+http://123.45.67.89/login/verify/account/update/password
+http://111.22.33.44/secure/account/login/update
+
+___________________________________________________________________________________________________
+
+# -------------------
+# TRIGGER EVERY CHECK
+# -------------------
+
+http://123.45.67.89/login/verify/account/update/password/confirm/secure/bank/test@redirect
+
+http://login.verify.secure.bank-update.example-domain.com/login/verify/account/update/password/confirm
+
+___________________________________________________________________________________________________
