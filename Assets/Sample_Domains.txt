@@ -1,0 +1,26 @@
+# ==================================
+# === Sample Domains for Testing ===
+# ==================================
+
+# ----------------
+# Popular Websites
+# ----------------
+
+google.com
+microsoft.com
+apple.com
+amazon.com
+github.com
+stackoverflow.com
+python.org
+wikipedia.org
+reddit.com
+netflix.com
+youtube.com
+facebook.com
+instagram.com
+linkedin.com
+mozilla.org
+
+___________________________________________________________________________________________________
+
