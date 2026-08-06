@@ -24,3 +24,76 @@ mozilla.org
 
 ___________________________________________________________________________________________________
 
+# --------
+# Websites
+# --------
+
+gov.za
+news24.com
+takealot.com
+absa.co.za
+standardbank.co.za
+fnb.co.za
+capitecbank.co.za
+nedbank.co.za
+discovery.co.za
+woolworths.co.za
+
+___________________________________________________________________________________________________
+
+# -----------------------
+# Cybersecurity Companies
+# -----------------------
+
+kaspersky.com
+bitdefender.com
+eset.com
+crowdstrike.com
+rapid7.com
+tenable.com
+fortinet.com
+paloaltonetworks.com
+hackthebox.com
+tryhackme.com
+offsec.com
+
+___________________________________________________________________________________________________
+
+# --------------------
+# Technology Companies
+# --------------------
+
+openai.com
+intel.com
+amd.com
+nvidia.com
+oracle.com
+ibm.com
+cloudflare.com
+ubuntu.com
+kali.org
+docker.com
+github.com
+gitlab.com
+
+___________________________________________________________________________________________________
+
+# ---------------
+# Cloud Providers
+# ---------------
+
+aws.amazon.com
+azure.microsoft.com
+cloud.google.com
+
+___________________________________________________________________________________________________
+
+# ---------------------
+# Educational Platforms
+# ---------------------
+
+udemy.com
+codecademy.com
+freecodecamp.org
+
+___________________________________________________________________________________________________
