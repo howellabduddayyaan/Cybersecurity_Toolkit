@@ -8,7 +8,7 @@ import platform
 import psutil
 
 from shared.banner import show_banner
-from shared.tables import print_table, print_analysis_complete
+from shared.tables import print_section, print_analysis_complete
 from shared.utils import pause
 
 
@@ -74,6 +74,7 @@ def get_device_information():
 
 # _________________________________________________________________________________________________
 
+# --- Output ---
 
     return {
         "device": {
@@ -105,3 +106,40 @@ def get_device_information():
 
 # _________________________________________________________________________________________________
 
+# --- Display Information ---
+
+def main():
+
+    show_banner("Device Scanner")
+
+    information = get_device_information()
+
+    print_section(
+        "Device Information",
+        information["device"]
+    )
+
+    print_section(
+        "CPU",
+        information["cpu"]
+    )
+
+    print_section(
+        "Memory",
+        information["memory"]
+    )
+
+    print_section(
+        "Storage",
+        information["storage"]
+    )
+
+    print_analysis_complete()
+
+    pause()
+
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
