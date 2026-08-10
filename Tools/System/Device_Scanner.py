@@ -54,3 +54,12 @@ cpu_usage = psutil.cpu_percent(interval=1)
 
 # _________________________________________________________________________________________________
 
+# --- RAM Information ---
+
+memory = psutil.virtual_memory()
+
+total_ram = memory.total / (1024 ** 3)
+available_ram = memory.available / (1024 ** 3)
+used_ram = memory.used / (1024 ** 3)
+
+# _________________________________________________________________________________________________
