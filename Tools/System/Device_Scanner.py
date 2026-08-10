@@ -42,3 +42,15 @@ def get_device_information():
     operating_system = (f"{platform.system()} {platform.release()}")
 
 # _________________________________________________________________________________________________
+
+# --- CPU Information ---
+
+processor = platform.processor()
+
+physical_cores = psutil.cpu_count(logical=False)
+logical_cores = psutil.cpu_count(logical=True)
+
+cpu_usage = psutil.cpu_percent(interval=1)
+
+# _________________________________________________________________________________________________
+
