@@ -63,3 +63,13 @@ available_ram = memory.available / (1024 ** 3)
 used_ram = memory.used / (1024 ** 3)
 
 # _________________________________________________________________________________________________
+
+# --- Storage Information ---
+
+disk = psutil.disk_usage("/")
+
+total_storage = disk.total / (1024 ** 3)
+used_storage = disk.used / (1024 ** 3)
+free_storage = disk.free / (1024 ** 3)
+
+# _________________________________________________________________________________________________
