@@ -53,3 +53,79 @@ def sniff_packet(packet):
 
         # _________________________________________________________________________________________
 
+        elif UDP in packet:
+
+            print_section(
+                "UDP Information",
+                {
+                    "Protocol": "UDP",
+                    "Source Port": packet[UDP].sport,
+                    "Destination Port": packet[UDP].dport
+                }
+            )
+
+        # _________________________________________________________________________________________
+
+        elif ICMP in packet:
+
+            print_section(
+                "ICMP Information",
+                {
+                    "Protocol": "ICMP"
+                }
+            )
+
+        # _________________________________________________________________________________________
+
+        else:
+
+            print_section(
+                "Protocol Information",
+                {
+                    "Protocol": "Other"
+                }
+            )
+
+    else:
+
+        print_section(
+            "Packet Information",
+            {
+                "Protocol": "Non-IP"
+            }
+        )
+
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Packet Sniffer")
+
+    print("\nListening for packets...")
+    print("Press CTRL+C to stop.\n")
+
+    try:
+
+        sniff(
+            prn=sniff_packet,
+            store=False
+        )
+
+    except KeyboardInterrupt:
+
+        print("\n\nPacket Sniffer Stopped.")
+
+        print_section(
+            "Capture Summary",
+            {
+                "Packets Captured": packet_count
+            }
+        )
+
+        print_analysis_complete()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
