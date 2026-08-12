@@ -49,3 +49,51 @@ def scan_network(network):
 
 
 # _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Network Scanner")
+
+    network = input("\nEnter network (e.g. 192.168.1): ").strip()
+
+    # _________________________________________________________________________________________________
+
+    try:
+
+        hostname = socket.gethostname()
+        local_ip = socket.gethostbyname(hostname)
+
+    except:
+
+        hostname = "Unavailable"
+        local_ip = "Unavailable"
+
+    # _________________________________________________________________________________________________
+
+    print_section(
+        "Local Device",
+        {
+            "Hostname": hostname,
+            "IP Address": local_ip
+        }
+    )
+
+    print("\nScanning network...\n")
+
+    # _________________________________________________________________________________________________
+
+    devices = scan_network(network)
+
+    print("\n\nScan Complete")
+
+    # _________________________________________________________________________________________________
+
+    print_section(
+        "Scan Results",
+        {
+            "Network": network,
+            "Devices Found": len(devices)
+        }
+    )
+
+    # _________________________________________________________________________________________________
