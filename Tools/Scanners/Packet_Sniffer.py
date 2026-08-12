@@ -40,3 +40,16 @@ def sniff_packet(packet):
 
         # _________________________________________________________________________________________
 
+        if TCP in packet:
+
+            print_section(
+                "TCP Information",
+                {
+                    "Protocol": "TCP",
+                    "Source Port": packet[TCP].sport,
+                    "Destination Port": packet[TCP].dport
+                }
+            )
+
+        # _________________________________________________________________________________________
+
