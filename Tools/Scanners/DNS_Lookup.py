@@ -8,7 +8,6 @@ from shared.banner import show_banner
 from shared.tables import print_section, print_analysis_complete
 from shared.utils import pause
 
-
 # _________________________________________________________________________________________________
 
 # --- Check Domain ---
@@ -53,8 +52,6 @@ def main():
 
         return
 
-# _________________________________________________________________________________________________
-
     information = lookup_domain(domain)
 
 # _________________________________________________________________________________________________
@@ -67,8 +64,6 @@ def main():
     print_analysis_complete()
 
     pause()
-
-# _________________________________________________________________________________________________
 
 if __name__ == "__main__":
     main()

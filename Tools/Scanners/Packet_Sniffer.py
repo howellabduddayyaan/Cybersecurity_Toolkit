@@ -7,7 +7,6 @@ from scapy.all import sniff, IP, TCP, UDP, ICMP
 from shared.banner import show_banner
 from shared.tables import print_section, print_analysis_complete
 
-
 # _________________________________________________________________________________________________
 
 packet_count = 0
@@ -94,7 +93,6 @@ def sniff_packet(packet):
                 "Protocol": "Non-IP"
             }
         )
-
 
 # _________________________________________________________________________________________________
 
