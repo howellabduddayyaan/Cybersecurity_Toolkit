@@ -25,3 +25,18 @@ def sniff_packet(packet):
 
     # _____________________________________________________________________________________________
 
+    if IP in packet:
+
+        source_ip = packet[IP].src
+        destination_ip = packet[IP].dst
+
+        print_section(
+            "IP Information",
+            {
+                "Source IP": source_ip,
+                "Destination IP": destination_ip
+            }
+        )
+
+        # _________________________________________________________________________________________
+
