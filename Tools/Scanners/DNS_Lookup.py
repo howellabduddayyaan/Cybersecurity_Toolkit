@@ -2,10 +2,6 @@
 # === Domain Name System Lookup Tool ===
 # ======================================
 
-# =======================
-# === DNS Lookup Tool ===
-# =======================
-
 import socket
 
 from shared.banner import show_banner
@@ -14,6 +10,8 @@ from shared.utils import pause
 
 
 # _________________________________________________________________________________________________
+
+# --- Check Domain ---
 
 def lookup_domain(domain):
 
@@ -35,5 +33,44 @@ def lookup_domain(domain):
             "Status": "Unable to resolve"
         }
 
+# _________________________________________________________________________________________________
 
+# --- Display ---
+
+def main():
+
+    show_banner("DNS Lookup Tool")
+
+    domain = input(
+        "\nEnter a domain (e.g. google.com): "
+    ).strip()
+
+    if not domain:
+
+        print("\nPlease enter a domain.")
+
+        pause()
+
+        return
+
+# _________________________________________________________________________________________________
+
+    information = lookup_domain(domain)
+
+# _________________________________________________________________________________________________
+
+    print_section(
+        "DNS Information",
+        information
+    )
+
+    print_analysis_complete()
+
+    pause()
+
+# _________________________________________________________________________________________________
+
+if __name__ == "__main__":
+    main()
+    
 # _________________________________________________________________________________________________
