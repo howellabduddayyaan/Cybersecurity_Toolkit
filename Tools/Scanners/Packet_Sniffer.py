@@ -4,8 +4,8 @@
 
 from scapy.all import sniff, IP, TCP, UDP, ICMP
 
-from shared.banner import show_banner
-from shared.tables import print_section, print_analysis_complete
+from Shared_Tools.Banner import show_banner
+from Shared_Tools.Tables import print_section, print_analysis_complete
 
 # _________________________________________________________________________________________________
 
