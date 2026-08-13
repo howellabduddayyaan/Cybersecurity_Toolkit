@@ -4,7 +4,7 @@
 
 import sys
 
-def progress(current, total):
+def progress(current, total,label="Scanning"):
 
     percent = int((current / total) * 100)
 
@@ -15,7 +15,9 @@ def progress(current, total):
     bar = "█" * filled + "-" * (bar_length - filled)
 
     sys.stdout.write(
-        f"\r|{bar}| {percent}% ({current}/{total})"
+        f"\r{label}:|{bar}|" 
+        f"{percent}% "
+        f"({current}/{total})"
     )
 
     sys.stdout.flush()
