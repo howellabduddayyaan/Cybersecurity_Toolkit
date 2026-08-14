@@ -50,7 +50,29 @@ def ping_sweep(network):
 
 # _________________________________________________________________________________________________
 
+def main():
 
+    show_banner("Ping Sweeper")
+
+    network = input("\nEnter network (e.g. 192.168.1): ").strip()
+
+    print("\nSweeping network...\n")
+
+    devices_found = ping_sweep(network)
+
+    print("\n\nSweep Complete")
+
+# _________________________________________________________________________________________________
+
+    print_section(
+        "Sweep Results",
+        {
+            "Network": network,
+            "Devices Found": len(devices_found)
+        }
+    )
+
+# _________________________________________________________________________________________________
 
     if devices_found:
 
