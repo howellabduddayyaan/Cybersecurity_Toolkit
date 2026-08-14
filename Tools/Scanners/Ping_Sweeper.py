@@ -49,3 +49,42 @@ def ping_sweep(network):
 
 
 # _________________________________________________________________________________________________
+
+
+
+    if devices_found:
+
+        print("--- Online Devices ---\n")
+
+        print(
+            f"{'No.':<6}"
+            f"{'IP Address'}"
+        )
+
+        print("-" * 30)
+
+        for number, ip in enumerate(
+            devices_found,
+            start=1
+        ):
+
+            print(
+                f"{number:<6}"
+                f"{ip}"
+            )
+
+    else:
+
+        print("No online devices were found.")
+
+# _________________________________________________________________________________________________
+
+    print_analysis_complete()
+
+    pause()
+
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
