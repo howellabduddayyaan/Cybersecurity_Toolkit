@@ -33,3 +33,25 @@ def scan_port(host, port):
         sock.close()
 
 # _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Port Scanner")
+
+    host = input("\nEnter an IP address or website: ").strip()
+
+    try:
+
+        start_port = int(input("Enter starting port: "))
+
+        end_port = int(input("Enter ending port: "))
+
+    except ValueError:
+
+        print("\nPlease enter valid port numbers.")
+
+        pause()
+
+        return
+
+    # _________________________________________________________________________________________________
