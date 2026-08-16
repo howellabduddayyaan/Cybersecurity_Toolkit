@@ -72,3 +72,71 @@ def main():
         return
 
     # _________________________________________________________________________________________________
+
+    print(f"\nScanning {host}...\n")
+
+    open_ports = []
+
+    try:
+
+        for port in range(start_port,end_port + 1):
+
+            if scan_port(host,port):
+
+                open_ports.append(port)
+
+        if not open_ports:
+
+            print(
+                "\nNo open ports found "
+                "in the specified range."
+            )
+
+# _________________________________________________________________________________________________
+
+        print_section(
+            "Scan Results",
+            {
+                "Host": host,
+                "Starting Port": start_port,
+                "Ending Port": end_port,
+                "Open Ports": len(open_ports)
+            }
+        )
+
+        if open_ports:
+
+            print("--- Open Ports ---\n")
+
+            print(
+                f"{'Port':<10}"
+                f"Status"
+            )
+
+            print("-" * 25)
+
+            for port in open_ports:
+
+                print(
+                    f"{port:<10}"
+                    f"OPEN"
+                )
+
+        print_analysis_complete()
+
+# _________________________________________________________________________________________________
+
+    except KeyboardInterrupt:
+
+        print("\n\nScan stopped by user")
+
+    except socket.gaierror:
+
+        print("\nInvalid host name")
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
