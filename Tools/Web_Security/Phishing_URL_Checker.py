@@ -161,3 +161,24 @@ def main():
     )
 
 # _________________________________________________________________________________________________
+
+    if result["Warnings"]:
+
+        print("--- Warnings ---\n")
+
+        for number, warning in enumerate(result["Warnings"],start=1):
+
+            print(f"{number:<5}: {warning}")
+
+    else:
+        print("\nNo suspicious indicators detected.")
+
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
