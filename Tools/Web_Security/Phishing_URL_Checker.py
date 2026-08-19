@@ -57,3 +57,12 @@ def check_url(url):
         
 # _________________________________________________________________________________________________
 
+    for keyword in SUSPICIOUS_KEYWORDS:
+
+        if keyword in url.lower():
+
+            risk_score += 1
+
+            warnings.append(f"Suspicious keyword: {keyword}")
+            
+# _________________________________________________________________________________________________
