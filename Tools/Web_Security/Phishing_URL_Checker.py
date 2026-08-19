@@ -30,3 +30,21 @@ def is_ip(address):
 
 # _________________________________________________________________________________________________
 
+def check_url(url):
+
+    risk_score = 0
+    warnings = []
+
+    parsed = urlparse(url)
+    domain = parsed.netloc.lower()
+    hostname = parsed.hostname
+
+    if hostname is None:
+
+        return {
+            "Risk Score": 0,
+            "Risk Level": "Invalid URL",
+            "Warnings": ["Unable to read hostname"]
+        }
+        
+# _________________________________________________________________________________________________
