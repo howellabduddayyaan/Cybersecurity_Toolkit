@@ -82,3 +82,14 @@ def check_url(url):
         warnings.append("URL is unusually long")
         
 # _________________________________________________________________________________________________
+
+    subdomains = hostname.split(".")
+
+    if len(subdomains) > 3:
+
+        risk_score += 1
+
+        warnings.append("Too many subdomains")
+        
+# _________________________________________________________________________________________________
+
