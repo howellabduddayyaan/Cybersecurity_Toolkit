@@ -108,3 +108,17 @@ def check_url(url):
         warnings.append("Domain contains hyphens")
         
 # _________________________________________________________________________________________________
+
+    if risk_score == 0:
+
+        risk_level = "Low"
+
+    elif risk_score <= 2:
+
+        risk_level = "Medium"
+
+    else:
+
+        risk_level = "High"
+        
+# _________________________________________________________________________________________________
