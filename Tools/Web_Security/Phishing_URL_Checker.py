@@ -144,3 +144,20 @@ def main():
         return
     
 # _________________________________________________________________________________________________
+
+    if not url.startswith(("http://", "https://")):
+
+        url = "http://" + url
+
+    result = check_url(url)
+
+    print_section(
+        "URL Analysis",
+        {
+            "URL": url,
+            "Risk Score": result["Risk Score"],
+            "Risk Level": result["Risk Level"]
+        }
+    )
+
+# _________________________________________________________________________________________________
