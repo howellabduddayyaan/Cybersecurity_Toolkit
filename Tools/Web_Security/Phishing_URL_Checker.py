@@ -121,4 +121,26 @@ def check_url(url):
 
         risk_level = "High"
         
+    return {
+        "Risk Score": risk_score,
+        "Risk Level": risk_level,
+        "Warnings": warnings
+    }
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Phishing URL Checker")
+
+    url = input("\nEnter a URL: ").strip()
+
+    if not url:
+
+        print("\nPlease enter a URL")
+
+        pause()
+
+        return
+    
 # _________________________________________________________________________________________________
