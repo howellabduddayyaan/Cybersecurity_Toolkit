@@ -102,3 +102,73 @@ def check_certificate_expiry(valid_until):
     except:
 
         return "Unable to determine"
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("SSL Certificate Checker")
+
+    domain = input("\nEnter a domain (e.g. google.com): ").strip()
+
+    if not domain:
+
+        print("\nPlease enter a domain")
+
+        pause()
+
+        return
+
+# _________________________________________________________________________________________________
+
+    print(f"\nChecking SSL certificate for {domain}...\n")
+
+    certificate = check_ssl_certificate(domain)
+
+# _________________________________________________________________________________________________
+
+    if certificate["Status"] != "Certificate Retrieved":
+
+        print_section("SSL Certificate",certificate)
+
+        print_analysis_complete()
+
+        pause()
+
+        return
+
+# _________________________________________________________________________________________________
+
+    expiry_status = check_certificate_expiry(
+        certificate["Valid Until"]
+    )
+
+    print_section(
+        "SSL Certificate",
+        {
+            "Domain": certificate["Domain"],
+            "Status": certificate["Status"],
+            "Valid From": certificate["Valid From"],
+            "Valid Until": certificate["Valid Until"],
+            "Expiry Status": expiry_status
+        }
+    )
+
+# _________________________________________________________________________________________________
+
+    print_section(
+        "Certificate Details",
+        {
+            "Issuer": certificate["Issuer"],
+            "Subject": certificate["Subject"]
+        }
+    )
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
