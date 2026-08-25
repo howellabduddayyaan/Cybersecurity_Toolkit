@@ -77,6 +77,28 @@ def check_ssl_certificate(domain):
             "Status": f"Error: {error}"
         }
 
-
 # _________________________________________________________________________________________________
 
+def check_certificate_expiry(valid_until):
+
+    if valid_until == "Unavailable":
+
+        return "Unavailable"
+
+    try:
+
+        expiry_date = datetime.strptime(valid_until,"%b %d %H:%M:%S %Y %Z").replace(tzinfo=UTC)
+
+        current_date = datetime.now(UTC)
+
+        if expiry_date < current_date:
+
+            return "EXPIRED"
+
+        remaining_days = (expiry_date - current_date).days
+
+        return f"{remaining_days} days remaining"
+
+    except:
+
+        return "Unable to determine"
