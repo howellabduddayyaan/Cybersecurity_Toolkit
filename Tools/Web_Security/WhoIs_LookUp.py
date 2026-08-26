@@ -32,6 +32,30 @@ def clean(value):
 
 # _________________________________________________________________________________________________
 
+def lookup_domain(domain):
+
+    try:
+
+        information = whois.whois(domain)
+
+        return {
+            "Domain Name": clean(information.domain_name),
+            "Registrar": clean(information.registrar),
+            "Created": clean(information.creation_date),
+            "Expires": clean(information.expiration_date),
+            "Name Servers": clean(information.name_servers),
+            "Status": clean(information.status)
+        }
+
+    except Exception as error:
+
+        return {
+            "Domain Name": domain,
+            "Status": "Lookup failed",
+            "Error": str(error)
+        }
+
+# _________________________________________________________________________________________________
 
 def main():
 
