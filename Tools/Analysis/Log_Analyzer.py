@@ -49,3 +49,41 @@ def analyze_log(filename):
 
 # _________________________________________________________________________________________________
 
+    print_section(
+        "Log Analysis Results",
+        {
+            "Log File": filename,
+            "Total Log Entries": total_lines,
+            "Information": info,
+            "Warnings": warnings,
+            "Errors": errors,
+            "Failed Logins": failed_logins
+        }
+    )
+
+    print_analysis_complete()
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Log Analyzer")
+
+    filename = input("\nEnter log file name: ").strip()
+
+    if not filename:
+
+        print("\nPlease enter a log file")
+
+        pause()
+
+        return
+
+    analyze_log(filename)
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
