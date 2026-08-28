@@ -117,3 +117,45 @@ def login():
     return False
 
 # _________________________________________________________________________________________________
+
+
+def main():
+
+    show_banner("Login Hash System")
+
+    while True:
+
+        print("""
+| 1 | Create Account
+| 2 | Login
+| 3 | Exit
+""")
+
+        choice = input("Choose an option: ").strip()
+
+        if choice == "1":
+
+            create_account()
+
+        elif choice == "2":
+
+            login()
+
+        elif choice == "3":
+
+            print("\nGoodbye")
+
+            break
+
+        else:
+
+            print("\nInvalid choice :(")
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
