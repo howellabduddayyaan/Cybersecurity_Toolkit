@@ -11,3 +11,12 @@ from Shared_Tools.Menu_Utilities import pause
 
 # _________________________________________________________________________________________________
 
+FILE_NAME = "users.txt"
+
+
+def hash_password(password):
+
+    return hashlib.sha256(password.encode()).hexdigest()
+
+# _________________________________________________________________________________________________
+
