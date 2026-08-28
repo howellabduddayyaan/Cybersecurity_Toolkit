@@ -61,3 +61,59 @@ def create_account():
     print("\nAccount created successfully :)")
 
 # _________________________________________________________________________________________________
+
+def login():
+
+    print("\n=== Login ===")
+
+    username = input("Username: ").strip()
+
+    password = input("Password: ")
+
+    if not os.path.exists(FILE_NAME):
+
+        print("\nNo users have been registered :(")
+
+        return False
+
+    password_hash = hash_password(password)
+
+# _________________________________________________________________________________________________
+
+    with open(FILE_NAME, "r") as file:
+
+        for line in file:
+
+            parts = line.strip().split(":")
+
+            if len(parts) != 2:
+                continue
+
+            saved_username = parts[0]
+            saved_hash = parts[1]
+
+            if (username == saved_username and password_hash == saved_hash):
+
+                print_section(
+                    "Login Result",
+                    {
+                        "Username": username,
+                        "Status": "Login Successful :)"
+                    }
+                )
+
+                return True
+
+# _________________________________________________________________________________________________
+
+    print_section(
+        "Login Result",
+        {
+            "Username": username,
+            "Status": "Invalid username or password"
+        }
+    )
+
+    return False
+
+# _________________________________________________________________________________________________
