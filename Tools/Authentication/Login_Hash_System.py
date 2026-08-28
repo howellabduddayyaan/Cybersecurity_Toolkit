@@ -20,3 +20,44 @@ def hash_password(password):
 
 # _________________________________________________________________________________________________
 
+def create_account():
+
+    print("\n=== Create Account ===")
+
+    username = input("Username: ").strip()
+
+    password = input("Password: ")
+
+    if not username or not password:
+
+        print("\nUsername and password cannot be empty")
+
+        return
+    
+# _________________________________________________________________________________________________
+
+    if os.path.exists(FILE_NAME):
+
+        with open(FILE_NAME, "r") as file:
+
+            for line in file:
+
+                saved_username = line.strip().split(":")[0]
+
+                if username == saved_username:
+
+                    print("\nUsername already exists:(")
+
+                    return
+                
+# _________________________________________________________________________________________________
+
+    password_hash = hash_password(password)
+
+    with open(FILE_NAME, "a") as file:
+
+        file.write(f"{username}:{password_hash}\n")
+
+    print("\nAccount created successfully :)")
+
+# _________________________________________________________________________________________________
