@@ -45,3 +45,27 @@ def login():
     return False
 
 # _________________________________________________________________________________________________
+
+def add_password():
+
+    print("\n=== Add Password ===")
+
+    website = input("Website : ").strip()
+
+    username = input("Username: ").strip()
+
+    password = input("Password: ")
+
+    if not website or not username or not password:
+
+        print("\nAll fields are required")
+
+        return
+
+    with open(VAULT_FILE,"a") as file:
+
+        file.write(f"{website}|{username}|{password}\n")
+
+    print("\nPassword saved successfully :)")
+
+# _________________________________________________________________________________________________
