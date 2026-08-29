@@ -118,3 +118,47 @@ def view_passwords():
         )
 
 # _________________________________________________________________________________________________
+
+def search_password():
+
+    print("\n=== Search Password ===")
+
+    website = input("Enter website: ").strip()
+
+    if not os.path.exists(VAULT_FILE):
+
+        print("\nNo passwords are saved :(")
+
+        return
+
+    found = False
+
+    with open(VAULT_FILE,"r") as file:
+
+        for entry in file:
+
+            parts = entry.strip().split("|")
+
+            if len(parts) != 3:
+                continue
+
+            saved_website, username, password = parts
+
+            if website.lower() == saved_website.lower():
+
+                print_section(
+                    "Password Found",
+                    {
+                        "Website": saved_website,
+                        "Username": username,
+                        "Password": password
+                    }
+                )
+
+                found = True
+
+    if not found:
+
+        print("\nWebsite not found")
+
+# _________________________________________________________________________________________________
