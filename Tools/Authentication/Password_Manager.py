@@ -236,3 +236,73 @@ def generate_password():
         print("\nPlease enter a valid number")
 
 # _________________________________________________________________________________________________
+
+def password_manager():
+
+    while True:
+
+        print("""
+================================
+=== Secure Password Manager ====
+================================
+
+1. Add Password
+2. View Passwords
+3. Search Password
+4. Delete Password
+5. Generate Password
+6. Exit
+""")
+
+        choice = input("Choose an option: ").strip()
+
+# _________________________________________________________________________________________________
+
+        if choice == "1":
+
+            add_password()
+
+        elif choice == "2":
+
+            view_passwords()
+
+        elif choice == "3":
+
+            search_password()
+
+        elif choice == "4":
+
+            delete_password()
+
+        elif choice == "5":
+
+            generate_password()
+
+        elif choice == "6":
+
+            print("\nGoodbye")
+
+            break
+
+        else:
+
+            print("\nInvalid option :(")
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Password Manager")
+
+    if login():
+
+        password_manager()
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
