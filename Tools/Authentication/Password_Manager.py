@@ -27,3 +27,21 @@ MASTER_HASH = hash_password(MASTER_PASSWORD)
 
 
 # _________________________________________________________________________________________________
+
+def login():
+
+    print("\n=== Login ===")
+
+    password = input("Enter master password: ")
+
+    if hash_password(password) == MASTER_HASH:
+
+        print("\nLogin Successful :)")
+
+        return True
+
+    print("\nIncorrect password :(")
+
+    return False
+
+# _________________________________________________________________________________________________
