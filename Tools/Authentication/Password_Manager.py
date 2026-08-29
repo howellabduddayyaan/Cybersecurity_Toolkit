@@ -162,3 +162,45 @@ def search_password():
         print("\nWebsite not found")
 
 # _________________________________________________________________________________________________
+
+def delete_password():
+
+    print("\n=== Delete Password ===")
+
+    website = input("Enter website: ").strip()
+
+    if not os.path.exists(VAULT_FILE):
+
+        print("\nNo passwords are saved :(")
+
+        return
+
+    with open(VAULT_FILE,"r") as file:
+
+        entries = file.readlines()
+
+    deleted = False
+
+    with open(VAULT_FILE,"w") as file:
+
+        for entry in entries:
+
+            saved_website = (entry.split("|")[0])
+
+            if (saved_website.lower()!= website.lower()):
+
+                file.write(entry)
+
+            else:
+
+                deleted = True
+
+    if deleted:
+
+        print("\nPassword deleted")
+
+    else:
+
+        print("\nWebsite not found")
+
+# _________________________________________________________________________________________________
