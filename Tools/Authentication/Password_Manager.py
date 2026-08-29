@@ -69,3 +69,52 @@ def add_password():
     print("\nPassword saved successfully :)")
 
 # _________________________________________________________________________________________________
+
+def view_passwords():
+
+    print("\n=== Saved Passwords ===")
+
+    if not os.path.exists(VAULT_FILE):
+
+        print("\nNo passwords are saved :(")
+
+        return
+
+    with open(VAULT_FILE,"r") as file:
+
+        entries = file.readlines()
+
+    if not entries:
+
+        print("\nNo passwords are saved :(")
+
+        return
+
+    print()
+
+    print(
+        f"{'No.':<6}"
+        f"{'Website':<25}"
+        f"{'Username':<25}"
+        f"Password"
+    )
+
+    print("-" * 75)
+
+    for number, entry in enumerate(entries,start=1):
+
+        parts = entry.strip().split("|")
+
+        if len(parts) != 3:
+            continue
+
+        website, username, password = parts
+
+        print(
+            f"{number:<6}"
+            f"{website:<25}"
+            f"{username:<25}"
+            f"{password}"
+        )
+
+# _________________________________________________________________________________________________
