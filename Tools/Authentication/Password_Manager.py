@@ -204,3 +204,35 @@ def delete_password():
         print("\nWebsite not found")
 
 # _________________________________________________________________________________________________
+
+def generate_password():
+
+    print("\n=== Password Generator ===")
+
+    try:
+
+        length = int(input("Password length: "))
+
+        if length <= 0:
+
+            print("\nEnter a number greater than 0")
+
+            return
+
+        characters = (string.ascii_letters + string.digits + "!@#$%^&*()")
+
+        password = "".join(secrets.choice(characters) for _ in range(length))
+
+        print_section(
+            "Generated Password",
+            {
+                "Length": length,
+                "Password": password
+            }
+        )
+
+    except ValueError:
+
+        print("\nPlease enter a valid number")
+
+# _________________________________________________________________________________________________
