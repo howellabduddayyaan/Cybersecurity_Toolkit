@@ -60,3 +60,48 @@ def check_password_strength(password):
         checks.append("Contains lowercase letter: FAIL")
 
 # _________________________________________________________________________________________________
+
+# ------- 
+# Numbers
+# -------
+
+    if any(char.isdigit() for char in password):
+
+        score += 1
+        checks.append("Contains number: PASS")
+
+    else:
+
+        checks.append("Contains number: FAIL")
+
+# _________________________________________________________________________________________________
+    
+# ------------------
+# Special characters
+# ------------------
+
+    if any(char in string.punctuation for char in password):
+
+        score += 1
+        checks.append("Contains special character: PASS")
+
+    else:
+
+        checks.append("Contains special character: FAIL")
+
+# _________________________________________________________________________________________________
+    
+# ---------------
+# Password length
+# --------------- 
+
+    if len(password) >= 12:
+
+        score += 1
+        checks.append("At least 12 characters: PASS")
+
+    else:
+
+        checks.append("At least 12 characters: FAIL")
+
+# _________________________________________________________________________________________________
