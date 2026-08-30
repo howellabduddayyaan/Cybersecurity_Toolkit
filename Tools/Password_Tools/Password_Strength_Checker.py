@@ -105,3 +105,108 @@ def check_password_strength(password):
         checks.append("At least 12 characters: FAIL")
 
 # _________________________________________________________________________________________________
+
+# ------------------    
+# Determine strength
+# ------------------
+
+    if score <= 2:
+
+        strength = "WEAK"
+
+    elif score <= 4:
+
+        strength = "MEDIUM"
+
+    elif score == 5:
+
+        strength = "STRONG"
+
+    else:
+
+        strength = "VERY STRONG"
+
+    return score, strength, checks
+
+
+# _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Password Strength Checker")
+
+    password = input("\nEnter password to check: ")
+
+    if not password:
+
+        print("\nPassword cannot be empty")
+
+        pause()
+
+        return
+
+# _________________________________________________________________________________________________
+
+    score, strength, checks = (check_password_strength(password))
+
+    print_section(
+        "Password Analysis",
+        {
+            "Password Length": len(password),
+            "Score": f"{score}/6",
+            "Strength": strength
+        }
+    )
+
+# _________________________________________________________________________________________________
+
+    print("--- Security Checks ---\n")
+
+    print(f"{'Check':<40}Result")
+
+    print("-" * 55)
+
+    for check in checks:
+
+        parts = check.rsplit(": ",1)
+
+        print(
+            f"{parts[0]:<40}"
+            f"{parts[1]}"
+        )
+
+# _________________________________________________________________________________________________
+
+    print()
+
+    if strength == "WEAK":
+
+        print(
+            "Recommendation: Use a longer password "
+            "with different character types"
+        )
+
+    elif strength == "MEDIUM":
+
+        print(
+            "Recommendation: Add more characters "
+            "and increase the password length"
+        )
+
+    elif strength == "STRONG":
+
+        print("Recommendation: Good password strength")
+
+    else:
+
+        print("Recommendation: Excellent password strength")
+
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
