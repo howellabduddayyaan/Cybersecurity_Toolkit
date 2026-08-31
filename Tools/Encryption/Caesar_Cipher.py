@@ -37,3 +37,64 @@ def caesar_cipher(text, shift, mode):
 
 # _________________________________________________________________________________________________
 
+def main():
+
+    show_banner("Caesar Cipher")
+
+
+    while True:
+
+        choice = input("\nEncrypt or Decrypt? (e/d): ").lower().strip()
+
+        if choice in ["e", "d"]:
+
+            break
+
+        print("Enter 'e' or 'd' only")
+
+    message = input("Enter message: ")
+
+    while True:
+
+        try:
+
+            shift = int(input("Enter shift value: "))
+
+            break
+
+        except ValueError:
+
+            print("Enter a number")
+
+    if choice == "e":
+
+        output = caesar_cipher(message,shift,"encrypt")
+
+        operation = "Encryption"
+
+    else:
+
+        output = caesar_cipher(message,shift,"decrypt"
+        )
+
+        operation = "Decryption"
+
+    print_section(
+        "Caesar Cipher Result",
+        {
+            "Operation": operation,
+            "Shift": shift,
+            "Input": message,
+            "Output": output
+        }
+    )
+
+    print_analysis_complete()
+
+    pause()
+
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
