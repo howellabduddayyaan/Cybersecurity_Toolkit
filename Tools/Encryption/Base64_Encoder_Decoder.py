@@ -25,3 +25,27 @@ def encode_text():
     )
 
 # _________________________________________________________________________________________________
+
+def decode_text():
+
+    text = input("\nEnter Base64 text to decode: ")
+
+    try:
+
+        decoded = base64.b64decode(text, validate=True).decode()
+
+        print_section(
+            "Base64 Decoding",
+            {
+                "Encoded": text,
+                "Decoded": decoded
+            }
+        )
+
+    except Exception:
+
+        print("\nError: Invalid Base64 input")
+
+
+# _________________________________________________________________________________________________
+
