@@ -74,8 +74,7 @@ def main():
 
     else:
 
-        output = caesar_cipher(message,shift,"decrypt"
-        )
+        output = caesar_cipher(message,shift,"decrypt")
 
         operation = "Decryption"
 
