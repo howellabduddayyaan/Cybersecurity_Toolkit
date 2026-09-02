@@ -58,3 +58,85 @@ def brute_force(target, characters):
 
 
 # _________________________________________________________________________________________________
+
+def main():
+
+    show_banner("Brute Force Simulator")
+
+    print("\nThis is my educational simulator")
+
+    print("Use short test passwords to keep the simulation fast\n")
+
+    target = input("Enter target password: ").strip()
+
+    if not target:
+
+        print("\nPlease enter a target password.")
+
+        pause()
+
+        return
+
+    print("""
+Choose character set:
+
+1. Lowercase letters
+2. Lowercase + numbers
+3. Letters + numbers
+""")
+
+    choice = input("Choose an option: ").strip()
+
+# _________________________________________________________________________________________________
+
+    if choice == "1":
+
+        characters = string.ascii_lowercase
+
+        character_set = "Lowercase letters"
+
+    elif choice == "2":
+
+        characters = (string.ascii_lowercase + string.digits)
+
+        character_set = "Lowercase + numbers"
+
+    elif choice == "3":
+
+        characters = (string.ascii_letters + string.digits)
+
+        character_set = "Letters + numbers"
+
+    else:
+
+        print("\nInvalid option")
+
+        pause()
+
+        return
+
+    print_section(
+        "Simulation Information",
+        {
+            "Target Length": len(target),
+            "Character Set": character_set
+        }
+    )
+
+    print("\nStarting simulation...\n")
+
+    result = brute_force(target,characters)
+
+    print_section(
+        "Simulation Results",
+        result
+    )
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
