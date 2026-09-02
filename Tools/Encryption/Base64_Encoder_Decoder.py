@@ -49,3 +49,44 @@ def decode_text():
 
 # _________________________________________________________________________________________________
 
+
+def main():
+
+    show_banner("Base64 Encoder / Decoder")
+
+    while True:
+
+        print("""
+1. Encode
+2. Decode
+3. Exit
+""")
+
+        choice = input("Choose an option: ").strip()
+
+        if choice == "1":
+
+            encode_text()
+
+        elif choice == "2":
+
+            decode_text()
+
+        elif choice == "3":
+
+            print("\nGoodbye")
+
+            break
+
+        else:
+
+            print("\nInvalid choice")
+
+    print_analysis_complete()
+
+    pause()
+
+if __name__ == "__main__":
+    main()
+    
+# _________________________________________________________________________________________________
