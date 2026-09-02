@@ -10,6 +10,29 @@ Run : python dashboard.py
 
 import os
 
+from Tools.System.Device_Scanner import main as device_scanner_main
+
+from Tools.Scanners.Network_Scanner import main as network_scanner_main
+from Tools.Scanners.Port_Scanner import main as port_scanner_main
+from Tools.Scanners.Packet_Sniffer import main as packet_sniffer_main
+from Tools.Scanners.DNS_Lookup import main as dns_lookup_main
+
+from Tools.Web_Security.Phishing_URL_Checker import main as phishing_checker_main
+from Tools.Web_Security.SSL_Certificate_Checker import main as ssl_checker_main
+from Tools.Web_Security.WhoIs_LookUp import main as whois_lookup_main
+
+from Tools.Authentication.Login_Hash_System import main as login_system_main
+from Tools.Authentication.Password_Manager import main as password_manager_main
+
+from Tools.Password_Tools.Password_Strength_Checker import main as password_strength_main
+
+from Tools.Encryption.Caesar_Cipher import main as caesar_cipher_main
+from Tools.Encryption.Base64_Encoder_Decoder import main as base64_tool_main
+
+from Tools.Analysis.Log_Analyzer import main as log_analyzer_main
+
+from Tools.Simulation.Brute_Force_Simulator import main as brute_force_main
+
 # _________________________________________________________________________________________________
 
 # ---------------
@@ -40,6 +63,7 @@ def banner():
 
 def device_scanner():
     print("\nLaunching Device Scanner...")
+    device_scanner_main()
     
 
 def network_scanner():
