@@ -2,11 +2,11 @@
 # === Table format ===
 # ====================
 
-def print_table(title, data):
+def print_section(title, data):
 
-    print("\n" + "=" * 50)
-    print(title.center(50))
-    print("=" * 50)
+    print("\n" + "=" * 70)
+    print(title.center(70))
+    print("=" * 70)
 
     for key, value in data.items():
         print(f"{key:<20}: {value}")
@@ -15,10 +15,10 @@ def print_table(title, data):
     
 # _________________________________________________________________________________________________
 
-def print_analysis_complete():
+def print_analysis_complete(analysis_complete):
 
-    print("=" * 50)
-    print("Analysis Complete")
-    print("=" * 50)
+    print("=" * 70)
+    print(analysis_complete.center(70))
+    print("=" * 70)
     
 # _________________________________________________________________________________________________
