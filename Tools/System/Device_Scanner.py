@@ -134,6 +134,8 @@ def main():
         information["storage"]
     )
 
+    analysis_complete = "Analysis Complete"
+    
     print_analysis_complete(analysis_complete)
 
     pause()

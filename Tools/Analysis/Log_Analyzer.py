@@ -61,7 +61,8 @@ def analyze_log(filename):
         }
     )
 
-    print_analysis_complete()
+    analysis_complete = "Analysis Complete"
+    print_analysis_complete(analysis_complete)
 
 # _________________________________________________________________________________________________
 

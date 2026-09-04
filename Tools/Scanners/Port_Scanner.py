@@ -122,9 +122,9 @@ def main():
                     f"OPEN"
                 )
 
-        print_analysis_complete()
-
-# _________________________________________________________________________________________________
+        analysis_complete = "Analysis Complete"
+        
+        print_analysis_complete(analysis_complete)
 
     except KeyboardInterrupt:
 

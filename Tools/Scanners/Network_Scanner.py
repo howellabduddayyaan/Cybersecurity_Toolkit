@@ -123,7 +123,9 @@ def main():
 
         print("\nNo devices were found")
 
-    print_analysis_complete()
+    analysis_complete = "Analysis Complete"
+    
+    print_analysis_complete(analysis_complete)
 
     pause()
 

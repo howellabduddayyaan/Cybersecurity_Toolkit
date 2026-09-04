@@ -99,9 +99,9 @@ def main():
 
         print("No online devices were found.")
 
-# _________________________________________________________________________________________________
-
-    print_analysis_complete()
+    analysis_complete = "Analysis Complete"
+    
+    print_analysis_complete(analysis_complete)
 
     pause()
 

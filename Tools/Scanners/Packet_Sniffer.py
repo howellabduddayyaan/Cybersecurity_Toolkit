@@ -120,8 +120,10 @@ def main():
                 "Packets Captured": packet_count
             }
         )
-
-        print_analysis_complete()
+        
+        analysis_complete = "Analysis Complete"
+        
+        print_analysis_complete(analysis_complete)
 
 if __name__ == "__main__":
     main()

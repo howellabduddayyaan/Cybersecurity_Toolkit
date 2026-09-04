@@ -132,7 +132,8 @@ Choose character set:
         result
     )
 
-    print_analysis_complete()
+    analysis_complete = "Analysis Complete"
+    print_analysis_complete(analysis_complete)
 
     pause()
 
