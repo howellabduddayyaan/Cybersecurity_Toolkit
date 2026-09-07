@@ -174,7 +174,7 @@ def main():
         print("\nNo suspicious indicators detected.")
 
 
-    print_analysis_complete()
+    print_analysis_complete("Analysis Complete")
 
     pause()
 

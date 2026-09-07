@@ -164,7 +164,7 @@ def main():
         }
     )
 
-    print_analysis_complete()
+    print_analysis_complete("Analysis Complete")
 
     pause()
 

@@ -80,7 +80,7 @@ def main():
         information
     )
 
-    print_analysis_complete()
+    print_analysis_complete("Analysis Complete")
 
     pause()
 
