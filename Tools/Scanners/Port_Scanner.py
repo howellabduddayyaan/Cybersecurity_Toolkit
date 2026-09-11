@@ -8,7 +8,7 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Scan Port ---
 
 def scan_port(host, port):
 
@@ -54,7 +54,7 @@ def main():
 
         return
 
-    # _________________________________________________________________________________________________
+# --- Port Validation ---
 
     if (
         start_port < 1
@@ -71,7 +71,7 @@ def main():
 
         return
 
-    # _________________________________________________________________________________________________
+# --- Scan Ports ---
 
     print(f"\nScanning {host}...\n")
 
@@ -92,7 +92,7 @@ def main():
                 "in the specified range."
             )
 
-# _________________________________________________________________________________________________
+# --- Scan Results ---
 
         print_section(
             "Scan Results",
@@ -103,6 +103,8 @@ def main():
                 "Open Ports": len(open_ports)
             }
         )
+
+# --- Display Open Ports ---
 
         if open_ports:
 
@@ -140,9 +142,3 @@ if __name__ == "__main__":
     main()
     
 # _________________________________________________________________________________________________
-
-"""
-
-IP Address
-
-"""

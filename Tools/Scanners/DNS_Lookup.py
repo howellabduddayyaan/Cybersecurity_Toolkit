@@ -8,8 +8,6 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
-
 # --- Check Domain ---
 
 def lookup_domain(domain):
@@ -32,8 +30,6 @@ def lookup_domain(domain):
             "Status": "Unable to resolve"
         }
 
-# _________________________________________________________________________________________________
-
 # --- Display ---
 
 def main():
@@ -54,12 +50,8 @@ def main():
 
     information = lookup_domain(domain)
 
-# _________________________________________________________________________________________________
 
-    print_section(
-        "DNS Information",
-        information
-    )
+    print_section("DNS Information",information)
 
     analysis_complete = "Analysis Complete"
     

@@ -9,10 +9,12 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+
+# --- Storage File ---
 
 FILE_NAME = "users.txt"
 
+# --- Hash Password ---
 
 def hash_password(password):
 
@@ -34,7 +36,7 @@ def create_account():
 
         return
     
-# _________________________________________________________________________________________________
+# --- Check Username ---
 
     if os.path.exists(FILE_NAME):
 
@@ -50,7 +52,7 @@ def create_account():
 
                     return
                 
-# _________________________________________________________________________________________________
+# --- Save Account ---
 
     password_hash = hash_password(password)
 
@@ -78,7 +80,7 @@ def login():
 
     password_hash = hash_password(password)
 
-# _________________________________________________________________________________________________
+# --- Check Login ---
 
     with open(FILE_NAME, "r") as file:
 
@@ -104,7 +106,7 @@ def login():
 
                 return True
 
-# _________________________________________________________________________________________________
+# --- Login Failed ---
 
     print_section(
         "Login Result",

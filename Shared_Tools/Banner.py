@@ -2,10 +2,12 @@
 # === Banner ===
 # ==============
 
+BANNER_WIDTH = 80
+
 def show_banner(title):
 
-    print("=" * 100)
-    print(title.center(100))
-    print("=" * 100)
+    print("=" * BANNER_WIDTH)
+    print(title.center(BANNER_WIDTH))
+    print("=" * BANNER_WIDTH)
     
 # _________________________________________________________________________________________________

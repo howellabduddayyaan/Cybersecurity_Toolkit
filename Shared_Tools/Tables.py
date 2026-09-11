@@ -2,23 +2,24 @@
 # === Table format ===
 # ====================
 
+TABLE_WIDTH = 80
+
 def print_section(title, data):
 
-    print("\n" + "=" * 80)
-    print(title.center(80))
-    print("=" * 80)
+    print("\n" + "=" * TABLE_WIDTH )
+    print(title.center(TABLE_WIDTH ))
+    print("=" * TABLE_WIDTH )
 
     for key, value in data.items():
         print(f"{key:<20}: {value}")
 
     print()
-    
-# _________________________________________________________________________________________________
+
 
 def print_analysis_complete(analysis_complete):
 
-    print("=" * 80)
-    print(analysis_complete.center(80))
-    print("=" * 80)
+    print("=" * TABLE_WIDTH )
+    print(analysis_complete.center(TABLE_WIDTH ))
+    print("=" * TABLE_WIDTH )
     
 # _________________________________________________________________________________________________

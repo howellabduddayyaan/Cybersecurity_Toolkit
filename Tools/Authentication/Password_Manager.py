@@ -11,12 +11,13 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Vault Storage File ---
 
 VAULT_FILE = "vault.txt"
 
 MASTER_PASSWORD = "Doodle"
 
+# --- Hash Password ---
 
 def hash_password(password):
 
@@ -256,7 +257,6 @@ def password_manager():
 
         choice = input("Choose an option: ").strip()
 
-# _________________________________________________________________________________________________
 
         if choice == "1":
 

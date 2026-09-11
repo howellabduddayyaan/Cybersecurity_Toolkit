@@ -10,7 +10,7 @@ from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
 
-# _________________________________________________________________________________________________
+# --- Ping Sweep ---
 
 def ping_sweep(network):
 
@@ -62,7 +62,6 @@ def main():
 
     print("\n\nSweep Complete")
 
-# _________________________________________________________________________________________________
 
     print_section(
         "Sweep Results",
@@ -72,7 +71,7 @@ def main():
         }
     )
 
-# _________________________________________________________________________________________________
+# --- Display Devices ---
 
     if devices_found:
 

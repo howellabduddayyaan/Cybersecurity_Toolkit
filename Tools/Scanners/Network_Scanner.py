@@ -10,7 +10,7 @@ from Shared_Tools.Progress_Bar import progress
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Scan Network ---
 
 def scan_network(network):
 
@@ -54,7 +54,7 @@ def main():
 
     network = input("\nEnter network (e.g. 192.168.1): ").strip()
 
-# _________________________________________________________________________________________________
+# --- Local Device ---
 
     try:
 
@@ -66,7 +66,6 @@ def main():
         hostname = "Unavailable"
         local_ip = "Unavailable"
 
-# _________________________________________________________________________________________________
 
     print_section(
         "Local Device",
@@ -78,13 +77,10 @@ def main():
 
     print("\nScanning network...\n")
 
-# _________________________________________________________________________________________________
-
     devices = scan_network(network)
 
     print("\n\nScan Complete")
 
-# _________________________________________________________________________________________________
 
     print_section(
         "Scan Results",
@@ -94,7 +90,7 @@ def main():
         }
     )
 
-# _________________________________________________________________________________________________
+# --- Display Devices ---
 
     if devices:
 

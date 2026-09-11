@@ -114,25 +114,13 @@ def main():
 
     information = get_device_information()
 
-    print_section(
-        "Device Information",
-        information["device"]
-    )
+    print_section("Device Information",information["device"])
 
-    print_section(
-        "CPU",
-        information["cpu"]
-    )
+    print_section("CPU",information["cpu"])
 
-    print_section(
-        "Memory",
-        information["memory"]
-    )
+    print_section("Memory",information["memory"])
 
-    print_section(
-        "Storage",
-        information["storage"]
-    )
+    print_section("Storage",information["storage"])
 
     analysis_complete = "Analysis Complete"
     

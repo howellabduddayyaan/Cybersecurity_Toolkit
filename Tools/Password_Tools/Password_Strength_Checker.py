@@ -14,11 +14,7 @@ def check_password_strength(password):
     score = 0
     checks = []
 
-# _________________________________________________________________________________________________
-    
-# ------
-# Length
-# ------
+# --- Length Check ---
 
     if len(password) >= 8:
 
@@ -29,11 +25,7 @@ def check_password_strength(password):
 
         checks.append("At least 8 characters: FAIL")
 
-# _________________________________________________________________________________________________
-
-# ---------
-# Uppercase
-# ---------
+# --- Uppercase Check ---
 
     if any(char.isupper() for char in password):
 
@@ -44,11 +36,7 @@ def check_password_strength(password):
 
         checks.append("Contains uppercase letter: FAIL")
 
-# _________________________________________________________________________________________________
-
-# ---------
-# Lowercase
-# ---------
+# --- Lowercase Check ---
 
     if any(char.islower() for char in password):
 
@@ -59,11 +47,7 @@ def check_password_strength(password):
 
         checks.append("Contains lowercase letter: FAIL")
 
-# _________________________________________________________________________________________________
-
-# ------- 
-# Numbers
-# -------
+# --- Number Check ---
 
     if any(char.isdigit() for char in password):
 
@@ -74,11 +58,7 @@ def check_password_strength(password):
 
         checks.append("Contains number: FAIL")
 
-# _________________________________________________________________________________________________
-    
-# ------------------
-# Special characters
-# ------------------
+# --- Special Character Check ---
 
     if any(char in string.punctuation for char in password):
 
@@ -89,11 +69,7 @@ def check_password_strength(password):
 
         checks.append("Contains special character: FAIL")
 
-# _________________________________________________________________________________________________
-    
-# ---------------
-# Password length
-# --------------- 
+# --- Password Length Check ---
 
     if len(password) >= 12:
 
@@ -104,11 +80,7 @@ def check_password_strength(password):
 
         checks.append("At least 12 characters: FAIL")
 
-# _________________________________________________________________________________________________
-
-# ------------------    
-# Determine strength
-# ------------------
+# --- Determine Strength ---
 
     if score <= 2:
 
@@ -145,7 +117,7 @@ def main():
 
         return
 
-# _________________________________________________________________________________________________
+# --- Password Analysis ---
 
     score, strength, checks = (check_password_strength(password))
 
@@ -158,7 +130,7 @@ def main():
         }
     )
 
-# _________________________________________________________________________________________________
+# --- Security Checks ---
 
     print("--- Security Checks ---\n")
 
@@ -175,7 +147,7 @@ def main():
             f"{parts[1]}"
         )
 
-# _________________________________________________________________________________________________
+# --- Recommendation ---
 
     print()
 

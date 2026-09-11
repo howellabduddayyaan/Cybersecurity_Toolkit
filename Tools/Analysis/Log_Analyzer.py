@@ -6,7 +6,8 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+
+# --- Analyze Log ---
 
 def analyze_log(filename):
 
@@ -21,7 +22,7 @@ def analyze_log(filename):
 
         return
 
-# _________________________________________________________________________________________________
+# --- Count Log Entries ---
 
     total_lines = len(lines)
 
@@ -47,7 +48,7 @@ def analyze_log(filename):
         if "FAILED LOGIN" in line:
             failed_logins += 1
 
-# _________________________________________________________________________________________________
+# --- Display Results ---
 
     print_section(
         "Log Analysis Results",
@@ -64,7 +65,7 @@ def analyze_log(filename):
     analysis_complete = "Analysis Complete"
     print_analysis_complete(analysis_complete)
 
-# _________________________________________________________________________________________________
+# --- Main ---
 
 def main():
 

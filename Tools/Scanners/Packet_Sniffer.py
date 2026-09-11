@@ -7,9 +7,11 @@ from scapy.all import sniff, IP, TCP, UDP, ICMP
 from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 
-# _________________________________________________________________________________________________
+# --- Packet Counter ---
 
 packet_count = 0
+
+# --- Analyze Packet ---
 
 def sniff_packet(packet):
 
@@ -22,7 +24,7 @@ def sniff_packet(packet):
     print(f"Packet {packet_count}")
     print("=" * 60)
 
-    # _____________________________________________________________________________________________
+# --- IP Information ---
 
     if IP in packet:
 
@@ -37,7 +39,7 @@ def sniff_packet(packet):
             }
         )
 
-        # _________________________________________________________________________________________
+# --- TCP Information ---
 
         if TCP in packet:
 
@@ -50,7 +52,7 @@ def sniff_packet(packet):
                 }
             )
 
-        # _________________________________________________________________________________________
+# --- UDP Information ---
 
         elif UDP in packet:
 
@@ -63,7 +65,7 @@ def sniff_packet(packet):
                 }
             )
 
-        # _________________________________________________________________________________________
+# --- ICMP Information ---
 
         elif ICMP in packet:
 
@@ -74,7 +76,7 @@ def sniff_packet(packet):
                 }
             )
 
-        # _________________________________________________________________________________________
+# --- Other Protocol ---
 
         else:
 
@@ -84,6 +86,8 @@ def sniff_packet(packet):
                     "Protocol": "Other"
                 }
             )
+
+# --- Non-IP Packet ---
 
     else:
 
