@@ -23,7 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent
 ASSETS_DIR = BASE_DIR / "assets"
 EXPORTS_DIR = ASSETS_DIR / "exports"
 
+# -------------
 # Storage Vault
+# -------------
 
 SAMPLE_DOMAINS = ASSETS_DIR / "sample_domains.txt"
 TEST_URLS = ASSETS_DIR / "test_urls.txt"

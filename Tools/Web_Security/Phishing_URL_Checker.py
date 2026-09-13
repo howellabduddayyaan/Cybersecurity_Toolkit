@@ -9,6 +9,7 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
+# --- Suspicious Keywords ---
 
 SUSPICIOUS_KEYWORDS = [
     "login",
@@ -21,6 +22,8 @@ SUSPICIOUS_KEYWORDS = [
     "confirm"
 ]
 
+# --- Check IP Address ---
+
 def is_ip(address):
 
     return re.match(
@@ -28,7 +31,7 @@ def is_ip(address):
         address
     ) is not None
 
-# _________________________________________________________________________________________________
+# --- Check URL ---
 
 def check_url(url):
 
@@ -47,7 +50,7 @@ def check_url(url):
             "Warnings": ["Unable to read hostname"]
         }
         
-# _________________________________________________________________________________________________
+# --- Check IP URL ---
 
     if is_ip(hostname):
 
@@ -55,7 +58,7 @@ def check_url(url):
 
         warnings.append("URL uses an IP address")
         
-# _________________________________________________________________________________________________
+# --- Check Keywords ---
 
     for keyword in SUSPICIOUS_KEYWORDS:
 
@@ -65,7 +68,7 @@ def check_url(url):
 
             warnings.append(f"Suspicious keyword: {keyword}")
             
-# _________________________________________________________________________________________________
+# --- Check @ Symbol ---
 
     if "@" in url:
 
@@ -73,7 +76,7 @@ def check_url(url):
 
         warnings.append("URL contains @ symbol")
         
-# _________________________________________________________________________________________________
+# --- Check URL Length ---
 
     if len(url) > 100:
 
@@ -81,7 +84,7 @@ def check_url(url):
 
         warnings.append("URL is unusually long")
         
-# _________________________________________________________________________________________________
+# --- Check Subdomains ---
 
     subdomains = hostname.split(".")
 
@@ -91,7 +94,7 @@ def check_url(url):
 
         warnings.append("Too many subdomains")
         
-# _________________________________________________________________________________________________
+# --- Check HTTPS ---
 
     if parsed.scheme != "https":
 
@@ -99,7 +102,7 @@ def check_url(url):
 
         warnings.append("URL does not use HTTPS")
         
-# _________________________________________________________________________________________________
+# --- Check Hyphens ---
 
     if "-" in hostname:
 
@@ -107,7 +110,7 @@ def check_url(url):
 
         warnings.append("Domain contains hyphens")
         
-# _________________________________________________________________________________________________
+# --- Determine Risk ---
 
     if risk_score == 0:
 
@@ -151,6 +154,8 @@ def main():
 
     result = check_url(url)
 
+# --- URL Analysis ---
+
     print_section(
         "URL Analysis",
         {
@@ -160,7 +165,7 @@ def main():
         }
     )
 
-# _________________________________________________________________________________________________
+# --- Display Warnings ---
 
     if result["Warnings"]:
 

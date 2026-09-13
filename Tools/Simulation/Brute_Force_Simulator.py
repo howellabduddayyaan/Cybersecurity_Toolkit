@@ -10,7 +10,7 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Apply Brute Force ---
 
 def brute_force(target, characters):
 
@@ -71,11 +71,13 @@ def main():
 
     if not target:
 
-        print("\nPlease enter a target password.")
+        print("\nPlease enter a target password")
 
         pause()
 
         return
+
+# --- Character Set Menu ---
 
     print("""
 Choose character set:
@@ -87,7 +89,7 @@ Choose character set:
 
     choice = input("Choose an option: ").strip()
 
-# _________________________________________________________________________________________________
+# --- Select Character Set ---
 
     if choice == "1":
 
@@ -115,6 +117,8 @@ Choose character set:
 
         return
 
+# --- Simulation Information ---
+
     print_section(
         "Simulation Information",
         {
@@ -125,12 +129,11 @@ Choose character set:
 
     print("\nStarting simulation...\n")
 
+# --- Run Simulation ---
+
     result = brute_force(target,characters)
 
-    print_section(
-        "Simulation Results",
-        result
-    )
+    print_section("Simulation Results",result)
 
     analysis_complete = "Analysis Complete"
     print_analysis_complete(analysis_complete)

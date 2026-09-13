@@ -56,16 +56,12 @@ def main():
 
 # --- Port Validation ---
 
-    if (
-        start_port < 1
+    if (start_port < 1
         or end_port > 65535
         or start_port > end_port
     ):
 
-        print(
-            "\nPort numbers must be between "
-            "1 and 65535."
-        )
+        print("\nPort numbers must be between 1 and 65535")
 
         pause()
 

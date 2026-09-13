@@ -14,7 +14,7 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Check SSL Certificate ---
 
 def check_ssl_certificate(domain):
 
@@ -28,7 +28,7 @@ def check_ssl_certificate(domain):
 
                 certificate = secure_socket.getpeercert()
 
-# _________________________________________________________________________________________________
+# --- Certificate Information ---
 
         issuer = certificate.get("issuer","Unavailable")
 
@@ -38,7 +38,7 @@ def check_ssl_certificate(domain):
 
         valid_until = certificate.get("notAfter","Unavailable")
 
-# _________________________________________________________________________________________________
+# --- Certificate Results ---
 
         return {
             "Domain": domain,
@@ -77,7 +77,7 @@ def check_ssl_certificate(domain):
             "Status": f"Error: {error}"
         }
 
-# _________________________________________________________________________________________________
+# --- Check Certificate Expiry ---
 
 def check_certificate_expiry(valid_until):
 
@@ -125,7 +125,8 @@ def main():
 
     certificate = check_ssl_certificate(domain)
 
-# _________________________________________________________________________________________________
+
+# --- Check Errors ---
 
     if certificate["Status"] != "Certificate Retrieved":
 
@@ -137,7 +138,7 @@ def main():
 
         return
 
-# _________________________________________________________________________________________________
+# --- Expiry Status ---
 
     expiry_status = check_certificate_expiry(
         certificate["Valid Until"]
@@ -153,8 +154,6 @@ def main():
             "Expiry Status": expiry_status
         }
     )
-
-# _________________________________________________________________________________________________
 
     print_section(
         "Certificate Details",

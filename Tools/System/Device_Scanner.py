@@ -17,8 +17,6 @@ def get_device_information():
 # --- Device Name ---
 
     device_name = socket.gethostname()
-    
-# _________________________________________________________________________________________________
 
 # --- IP Address ---
 
@@ -27,21 +25,15 @@ def get_device_information():
     except:
         ip_address = "Unavailable"
 
-# _________________________________________________________________________________________________
-
 # --- MAC Address ---
 
     mac = uuid.getnode()
 
     mac_address = ":".join(f"{(mac >> ele) & 0xff:02X}" for ele in range(40, -1, -8))
 
-# _________________________________________________________________________________________________
-
 # --- Operating System ---
 
     operating_system = (f"{platform.system()} {platform.release()}")
-
-# _________________________________________________________________________________________________
 
 # --- CPU Information ---
 
@@ -52,8 +44,6 @@ def get_device_information():
 
     cpu_usage = psutil.cpu_percent(interval=1)
 
-# _________________________________________________________________________________________________
-
 # --- RAM Information ---
 
     memory = psutil.virtual_memory()
@@ -61,8 +51,6 @@ def get_device_information():
     total_ram = memory.total / (1024 ** 3)
     available_ram = memory.available / (1024 ** 3)
     used_ram = memory.used / (1024 ** 3)
-
-# _________________________________________________________________________________________________
 
 # --- Storage Information ---
 

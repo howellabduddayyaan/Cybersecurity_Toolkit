@@ -8,7 +8,7 @@ from Shared_Tools.Banner import show_banner
 from Shared_Tools.Tables import print_section, print_analysis_complete
 from Shared_Tools.Menu_Utilities import pause
 
-# _________________________________________________________________________________________________
+# --- Clean WHOIS Data ---
 
 def clean(value):
 
@@ -30,7 +30,7 @@ def clean(value):
 
     return value
 
-# _________________________________________________________________________________________________
+# --- Lookup Domain ---
 
 def lookup_domain(domain):
 
@@ -70,6 +70,8 @@ def main():
         pause()
 
         return
+
+# --- Perform Lookup ---
 
     print(f"\nLooking up {domain}...\n")
 
