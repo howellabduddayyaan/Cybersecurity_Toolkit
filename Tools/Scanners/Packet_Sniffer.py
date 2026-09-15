@@ -103,33 +103,39 @@ def sniff_packet(packet):
 def main():
 
     show_banner("Packet Sniffer")
-
-    print("\nListening for packets...")
-    print("Press CTRL+C to stop.\n")
-
-    try:
-
-        sniff(
-            prn=sniff_packet,
-            store=False
-        )
-
-    except KeyboardInterrupt:
-
-        print("\n\nPacket Sniffer Stopped.")
-
-        print_section(
-            "Capture Summary",
-            {
-                "Packets Captured": packet_count
-            }
-        )
-        
-        analysis_complete = "Analysis Complete"
-        
-        print_analysis_complete(analysis_complete)
-
-if __name__ == "__main__":
-    main()
     
-# _________________________________________________________________________________________________
+    print("\n" + "=" * 60)
+    print("           [!] NOTICE: TOOL UNDER MAINTENANCE")
+    print("=" * 60)
+    print("\nThe Packet Sniffer is currently undergoing maintenance :(")
+    
+
+#     print("\nListening for packets...")
+#     print("Press CTRL+C to stop.\n")
+
+#     try:
+
+#         sniff(
+#             prn=sniff_packet,
+#             store=False
+#         )
+
+#     except KeyboardInterrupt:
+
+#         print("\n\nPacket Sniffer Stopped.")
+
+#         print_section(
+#             "Capture Summary",
+#             {
+#                 "Packets Captured": packet_count
+#             }
+#         )
+        
+#         analysis_complete = "Analysis Complete"
+        
+#         print_analysis_complete(analysis_complete)
+
+# if __name__ == "__main__":
+#     main()
+    
+# # _________________________________________________________________________________________________
