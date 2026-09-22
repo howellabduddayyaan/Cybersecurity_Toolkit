@@ -15,7 +15,7 @@ from Shared_Tools.Menu_Utilities import pause
 
 VAULT_FILE = "vault.txt"
 
-MASTER_PASSWORD = "Doodle"
+MASTER_PASSWORD = "Howell"
 
 # --- Hash Password ---
 

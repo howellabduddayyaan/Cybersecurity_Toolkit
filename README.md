@@ -55,7 +55,7 @@ Log Analyzer – Parses log files to detect suspicious activity, brute-force att
 
 Brute Force Simulator – Educational attack simulator illustrating password cracking speed and permutation complexity
 
-# Project Structure
+# --- Project Structure ---
 
     Cybersecurity_Toolkit/
     │
@@ -90,7 +90,7 @@ Brute Force Simulator – Educational attack simulator illustrating password cra
         ├── System/               # Device Scanner
         └── Web_Security/         # Phishing Checker, SSL Checker, WHOIS
 
-# Prerequisites
+# --- Prerequisites ---
 
 Ensure you have Python 3.10+ installed. Some networking and reconnaissance tools require third-party libraries:
 
@@ -99,15 +99,19 @@ pip install scapy python-whois
 Note on Packet Sniffing / Raw Sockets: Running the Packet Sniffer or low-level socket operations may require
 elevated/administrator privileges on Windows or root privileges (sudo) on Linux
 
-# Running the Toolkit
+# --- Running the Toolkit ---
 
 Launch the main interactive dashboard:
 
-python Dashboard.py
+python dashboard.py
 
 # Disclaimer
 
 This toolkit was created for educational, defensive, and authorized administrative testing purposes only. Do not scan or
 target systems, domains, or networks without explicit written permission from the owner.
+
+# --- Demo video ---
+
+https://youtu.be/c_53bVrxOX8
 
 # _______________________________________________________________________________________________________________________________
