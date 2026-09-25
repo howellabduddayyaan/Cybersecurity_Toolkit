@@ -243,9 +243,9 @@ def password_manager():
     while True:
 
         print("""
-================================
-=== Secure Password Manager ====
-================================
+===============================
+=== Secure Password Manager ===
+===============================
 
 1. Add Password
 2. View Passwords

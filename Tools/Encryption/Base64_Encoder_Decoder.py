@@ -57,9 +57,9 @@ def main():
     while True:
 
         print("""
-1. Encode
-2. Decode
-3. Exit
+1. | Encode
+2. | Decode
+3. | Exit
 """)
 
         choice = input("Choose an option: ").strip()
